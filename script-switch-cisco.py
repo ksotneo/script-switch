@@ -30,7 +30,7 @@ with ConnectHandler(**device) as net_connect:
 
     net_connect.write_channel("enable\n")
 
-    net_connect.write_channel("sid123145\n")
+    net_connect.write_channel("sid\n")
 
 
     with open(output_file, "w") as file:
