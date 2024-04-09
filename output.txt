@@ -1,0 +1,37 @@
+Команда: enable
+==================================================
+Команда: show ip int bri
+Interface              IP-Address      OK? Method Status                Protocol
+Ethernet0/0            unassigned      YES unset  up                    up      
+Ethernet0/1            unassigned      YES unset  up                    up      
+Ethernet0/2            unassigned      YES unset  up                    up      
+Ethernet0/3            unassigned      YES unset  up                    up      
+Vlan1                  192.168.31.158  YES NVRAM  up                    up      ==================================================
+Команда: show running-config | include access-list
+access-list 1 permit 192.168.31.42==================================================
+Команда: show running-config | include ip nat
+==================================================
+Команда: show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Et0/0                        connected    1            auto   auto unknown
+Et0/1                        connected    1            auto   auto unknown
+Et0/2                        connected    1            auto   auto unknown
+Et0/3                        connected    1            auto   auto unknown==================================================
+Команда: show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Et0/0, Et0/1, Et0/2, Et0/3
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup ==================================================
+Команда: show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID==================================================
+Команда: show lldp neighbors
+% LLDP is not enabled==================================================
